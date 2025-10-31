@@ -10,13 +10,18 @@ on:
     # Syntax reference: https://docs.github.com/en/actions/reference/events-that-trigger-workflows#schedule
     # Recommended tool: https://crontab.guru/
     - cron: "0 4 * * *"
-
+    
+permissions:
+  contents: write   # 允许写入仓库内容（用于创建 gh-pages）
+  pages: write      # 允许部署 Pages
+  id-token: write
+  
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Download ArxivFeed
         env:
           GITHUB_PAT: ${{ github.token }}
