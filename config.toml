@@ -1,6 +1,6 @@
-site_title = "MyArxiv"
+site_title = "Robot Arxiv Daily"
 limit_days = 7
-cache_url = "https://Calvindrinks.github.io/MyArxiv/cache.json"
+cache_url = "https://Calvindrinks.github.io/arxivdaily/cache.json"
 
 [[sources]]
 limit = 300
